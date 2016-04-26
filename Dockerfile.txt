@@ -1,0 +1,7 @@
+# Version: 0.0.4
+FROM ipython/scipystack
+MAINTAINER D gannon "dbgannon@gmail.com"
+RUN easy_install azure==0.11.1
+RUN easy_install pika
+COPY generic-worker.py /
+CMD ["python", "/generic-worker.py"]
